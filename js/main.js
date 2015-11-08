@@ -42,3 +42,5 @@ function displayNewBernieQuote(){
 
 // *Space* triggers a random quote to display
 document.addEventListener('keyup', displayNewBernieQuoteIfSpace, false);
+
+displayNewBernieQuote();
