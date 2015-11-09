@@ -293,6 +293,7 @@ html {
 
 #bernie-quote {
     text-align: center;
+    min-height: 100px;
     font-size: 20px;
     font-style: italic;
 }
@@ -303,8 +304,8 @@ html {
 }
 
 .bernie-pic {
-    margin: 30px auto;
-    width: 50%;
+    margin: 20px auto;
+    width: 40%;
     border-color: #F55B5B;
     border-width: 10px;
     border-style: solid;
@@ -321,3 +322,10 @@ html {
 #volume:hover {
   transform: ;
 }
+
+@media (max-width: 680px) {
+  #bernie-quote {
+    min-height: 310px;
+  }
+}
+
