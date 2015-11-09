@@ -278,7 +278,6 @@ textarea {
    Custom styles
    ========================================================================== */
 
-#answer {
-  text-decoration: underline;
-  letter-spacing: 10px;
+html {
+  cursor: url("../img/vermont.png"), auto
 }
