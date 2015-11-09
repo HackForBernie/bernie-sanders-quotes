@@ -26,10 +26,12 @@ function randomQuote(){
 
 var bernieQuoteElement = document.getElementById('bernie-quote');
 var previousQuote = "";
+var audio = new Audio('ThisLand.mp3');
 
-function displayNewBernieQuoteIfSpace(e){
+function spaceHit(e){
   if (e.keyCode == 32){
     displayNewBernieQuote();
+    playSong();
   }
 }
 function displayNewBernieQuote(){
@@ -39,8 +41,12 @@ function displayNewBernieQuote(){
   } while (newQuote == previousQuote);
   bernieQuoteElement.textContent = newQuote;
 }
+function playSong(){
+  audio.currentTime = 0;
+  audio.play();
+}
 
 // *Space* triggers a random quote to display
-document.addEventListener('keyup', displayNewBernieQuoteIfSpace, false);
+document.addEventListener('keyup', spaceHit, false);
 
 displayNewBernieQuote();
