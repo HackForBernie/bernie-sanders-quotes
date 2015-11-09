@@ -29,7 +29,8 @@ var previousQuote = "";
 var audio = new Audio('ThisLand.mp3');
 
 function spaceHit(e){
-  if (e.keyCode == 32){
+  var isTouchOrSpaceBarPress = !e.keyCode || e.keyCode == 32;
+  if (isTouchOrSpaceBarPress){
     displayNewBernieQuote();
     playSong();
   }
@@ -48,6 +49,7 @@ function playSong(){
 
 // *Space* triggers a random quote to display
 document.addEventListener('keyup', spaceHit, false);
+bernieQuoteElement.addEventListener('touchstart', spaceHit, false);
 
 var volumeIconElement = document.getElementById('volume');
 const FAVOLUMEUPCLASS = "fa-volume-up";
