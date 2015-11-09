@@ -49,4 +49,23 @@ function playSong(){
 // *Space* triggers a random quote to display
 document.addEventListener('keyup', spaceHit, false);
 
+var volumeIconElement = document.getElementById('volume');
+const FAVOLUMEUPCLASS = "fa-volume-up";
+const FAVOLUMEMUTECLASS = "fa-volume-off";
+
+function toggleVolumeIcon(){
+  if (audio.muted) {
+    volumeIconElement.classList.remove(FAVOLUMEMUTECLASS);
+    volumeIconElement.classList.add(FAVOLUMEUPCLASS);
+  } else {
+    volumeIconElement.classList.remove(FAVOLUMEUPCLASS);
+    volumeIconElement.classList.add(FAVOLUMEMUTECLASS);
+  }
+  audio.muted = volumeIconElement.classList.contains(FAVOLUMEMUTECLASS);
+}
+
+volumeIconElement.addEventListener('click', toggleVolumeIcon)
+
+audio.muted = true;
+
 displayNewBernieQuote();

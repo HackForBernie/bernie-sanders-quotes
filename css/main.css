@@ -282,3 +282,14 @@ html {
   cursor: url("../img/vermont.png"), auto;
   background-image: url("../img/Bernie_Sanders_portrait.jpg");
 }
+
+#volume {
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+#volume:hover {
+  color: lightblue;
+}
