@@ -55,7 +55,8 @@ var volumeIconElement = document.getElementById('volume');
 const FAVOLUMEUPCLASS = "fa-volume-up";
 const FAVOLUMEMUTECLASS = "fa-volume-off";
 
-function toggleVolumeIcon(){
+function toggleVolumeIcon(e){
+  e.preventDefault(); // prevents emulated click
   if (audio.muted) {
     volumeIconElement.classList.remove(FAVOLUMEMUTECLASS);
     volumeIconElement.classList.add(FAVOLUMEUPCLASS);
@@ -66,8 +67,9 @@ function toggleVolumeIcon(){
   audio.muted = volumeIconElement.classList.contains(FAVOLUMEMUTECLASS);
 }
 
+// Touchstart for mobile, click for desktop
 volumeIconElement.addEventListener('click', toggleVolumeIcon)
-volumeIconElement.addEventListener('touchStart', toggleVolumeIcon)
+volumeIconElement.addEventListener('touchstart', toggleVolumeIcon)
 
 audio.muted = true;
 
