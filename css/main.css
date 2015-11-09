@@ -280,5 +280,33 @@ textarea {
 
 html {
   cursor: url("../img/vermont.png"), auto;
-  background-image: url("../img/Bernie_Sanders_portrait.jpg");
+  background: #147FD7;
+  font-family: Arvo;
+  color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+#bernie-quote {
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.bernie-pic-container {
+    width: 100%;
+    text-align: center;
+}
+
+.bernie-pic {
+    margin: 30px auto;
+    width: 50%;
+    border-color: #F55B5B;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
 }

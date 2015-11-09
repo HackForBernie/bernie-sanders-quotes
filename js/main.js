@@ -39,7 +39,7 @@ function displayNewBernieQuote(){
   do {
     newQuote = randomQuote();
   } while (newQuote == previousQuote);
-  bernieQuoteElement.textContent = newQuote;
+  bernieQuoteElement.textContent = "\"" + newQuote + "\"";
 }
 function playSong(){
   audio.currentTime = 0;
