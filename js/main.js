@@ -65,6 +65,7 @@ function toggleVolumeIcon(){
 }
 
 volumeIconElement.addEventListener('click', toggleVolumeIcon)
+volumeIconElement.addEventListener('touchStart', toggleVolumeIcon)
 
 audio.muted = true;
 
