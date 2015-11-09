@@ -314,10 +314,10 @@ html {
 #volume {
   color: white;
   position: absolute;
-  right: 10px;
+  left: 10px;
   bottom: 0px;
 }
 
 #volume:hover {
-  color: lightblue;
+  transform: ;
 }
