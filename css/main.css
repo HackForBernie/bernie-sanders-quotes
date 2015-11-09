@@ -310,3 +310,14 @@ html {
     border-style: solid;
     border-radius: 50%;
 }
+
+#volume {
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+#volume:hover {
+  color: lightblue;
+}
