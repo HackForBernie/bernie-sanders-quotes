@@ -279,5 +279,6 @@ textarea {
    ========================================================================== */
 
 html {
-  cursor: url("../img/vermont.png"), auto
+  cursor: url("../img/vermont.png"), auto;
+  background-image: url("../img/Bernie_Sanders_portrait.jpg");
 }
