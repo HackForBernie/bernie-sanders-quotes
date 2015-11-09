@@ -29,7 +29,8 @@ var previousQuote = "";
 var audio = new Audio('ThisLand.mp3');
 
 function spaceHit(e){
-  if (e.keyCode == 32){
+  var isTouchOrSpaceBarPress = !e.keyCode || e.keyCode == 32;
+  if (isTouchOrSpaceBarPress){
     displayNewBernieQuote();
     playSong();
   }
@@ -48,12 +49,14 @@ function playSong(){
 
 // *Space* triggers a random quote to display
 document.addEventListener('keyup', spaceHit, false);
+bernieQuoteElement.addEventListener('touchstart', spaceHit, false);
 
 var volumeIconElement = document.getElementById('volume');
 const FAVOLUMEUPCLASS = "fa-volume-up";
 const FAVOLUMEMUTECLASS = "fa-volume-off";
 
-function toggleVolumeIcon(){
+function toggleVolumeIcon(e){
+  e.preventDefault(); // prevents emulated click
   if (audio.muted) {
     volumeIconElement.classList.remove(FAVOLUMEMUTECLASS);
     volumeIconElement.classList.add(FAVOLUMEUPCLASS);
@@ -64,7 +67,9 @@ function toggleVolumeIcon(){
   audio.muted = volumeIconElement.classList.contains(FAVOLUMEMUTECLASS);
 }
 
+// Touchstart for mobile, click for desktop
 volumeIconElement.addEventListener('click', toggleVolumeIcon)
+volumeIconElement.addEventListener('touchstart', toggleVolumeIcon)
 
 audio.muted = true;
 
