@@ -27,6 +27,7 @@ function randomQuote(){
 var bernieQuoteElement = document.getElementById('bernie-quote');
 var previousQuote = "";
 var audio = new Audio('ThisLand.mp3');
+var berniePicElement = document.getElementById('bernie-pic')
 
 function spaceHit(e){
   var isTouchOrSpaceBarPress = !e.keyCode || e.keyCode == 32;
@@ -48,8 +49,8 @@ function playSong(){
 }
 
 // *Space* triggers a random quote to display
+berniePicElement.addEventListener('click', spaceHit, false)
 document.addEventListener('keyup', spaceHit, false);
-bernieQuoteElement.addEventListener('touchstart', spaceHit, false);
 
 var volumeIconElement = document.getElementById('volume');
 const FAVOLUMEUPCLASS = "fa-volume-up";
