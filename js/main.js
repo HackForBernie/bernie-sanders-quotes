@@ -30,7 +30,6 @@ var audio = new Audio('ThisLand.mp3');
 var berniePicElement = document.getElementById('bernie-pic')
 
 function spaceHit(e){
-  console.log(e)
   var isTouchOrSpaceBarPress = !e.keyCode || e.keyCode == 32;
   if (isTouchOrSpaceBarPress){
     displayNewBernieQuote();
